@@ -1,3 +1,4 @@
 import math
 
-print(math.pow(2, 38))
+solution = int(math.pow(2, 38))
+print(solution)
