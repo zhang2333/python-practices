@@ -1,8 +1,8 @@
 from urllib import request
 import re
 
-with request.urlopen('http://www.pythonchallenge.com/pc/def/ocr.html') as f:
-    page = f.read()
+with request.urlopen('http://www.pythonchallenge.com/pc/def/ocr.html') as resp:
+    page = resp.read()
     p = re.compile(r'<!--([^>]+)-->')
     flag = False
     for m in p.finditer(str(page)):

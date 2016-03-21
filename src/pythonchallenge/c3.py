@@ -1,8 +1,8 @@
 from urllib import request
 import re
 
-with request.urlopen('http://www.pythonchallenge.com/pc/def/equality.html') as f:
-    page = f.read()
+with request.urlopen('http://www.pythonchallenge.com/pc/def/equality.html') as resp:
+    page = resp.read()
     p = re.compile(r'<!--([^>]+)-->')
     for m in p.finditer(str(page)):
         s = m.group().replace(r'\n', '')

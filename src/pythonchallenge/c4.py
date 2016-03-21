@@ -13,8 +13,8 @@ def requestCode(code, times):
 
     normal = False
     try:
-        with request.urlopen(url_format + code) as f:
-            page = str(f.read(), 'utf-8')
+        with request.urlopen(url_format + code) as resp:
+            page = str(resp.read(), 'utf-8')
             p = re.compile(r'([0-9]+)')
             arr = p.findall(page)
             if page.find('Divide') != -1:
