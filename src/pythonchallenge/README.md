@@ -12,4 +12,5 @@
 ### 6. peak.html
 ### 7. channel.html
 ### 8. oxygen.html
+### 9. integrity.html
 
